@@ -33,7 +33,7 @@ async def demo_post(inp: Msg):
 async def demo_get_path_id(path_id: int):
     return {"message": f"This is /path/{path_id} endpoint, use post request to retrieve result"}
 
-@app.get("/{url:path}")
+@app.get("/translate/{url:path}")
 async def root(url: str):
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
